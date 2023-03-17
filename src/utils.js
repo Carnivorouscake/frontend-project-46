@@ -7,17 +7,18 @@ const compare = (a, b) => {
 
   return a[1] > b[1] ? 1 : -1;
 };
-const filePath1 = 'file1.json';
-const filePath2 = 'file2.json';
-
-const fileData1 = readFileSync(filePath1, { encoding: 'utf8', flag: 'r'});
-const fileData2 = readFileSync(filePath2,  { encoding: 'utf8', flag: 'r'});
-
-const object1 = JSON.parse(fileData1);
-const object2 = JSON.parse(fileData2); 
 
 
-const getDiff = (object1, object2) => {
+
+const getDiff = (filePath1, filePath2) => {
+
+
+  const fileData1 = readFileSync(filePath1, { encoding: 'utf8', flag: 'r'});
+  const fileData2 = readFileSync(filePath2,  { encoding: 'utf8', flag: 'r'});
+  
+  const object1 = JSON.parse(fileData1);
+  const object2 = JSON.parse(fileData2); 
+
   let result = [];
   for (let key in object1){
     let child = object1[key];
@@ -43,4 +44,6 @@ const getDiff = (object1, object2) => {
 };
 
 
-console.log(getDiff(object1, object2))
+//getDiff(object1, object2);
+
+export default getDiff;
