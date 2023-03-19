@@ -1,11 +1,11 @@
 {
   "name": "frontend-project-46",
   "version": "1.0.0",
-  "description": "gendiff -h",
+  "description": "getdiff -h",
   "main": "utils.js",
   "type": "module",
   "scripts": {
-    "test":  "npx jest"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,25 @@
   },
   "homepage": "https://github.com/Carnivorouscake/frontend-project-46#readme",
   "dependencies": {
+    "@jest/globals": "^29.0.1",
     "commander": "^10.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.0",
     "fs": "^0.0.1-security",
-    "lodash": "^4.17.21"
+    "jest-cli": "^29.0.1",
+    "lodash": "^4.17.21",
+    "npm-check-updates": "^16.0.6",
+    "simple-git-hooks": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "eslint": "^8.36.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.0.2"
+  },
+  "bin":{
+    "getdiff" : "bin/getdiff.js"
   }
 }

@@ -43,7 +43,4 @@ const getDiff = (filePath1, filePath2) => {
 
 };
 
-
-//getDiff(object1, object2);
-
 export default getDiff;
