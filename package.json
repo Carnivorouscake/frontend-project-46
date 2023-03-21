@@ -27,6 +27,7 @@
     "jest-cli": "^29.0.1",
     "lodash": "^4.17.21",
     "npm-check-updates": "^16.0.6",
+    "prettier": "^2.8.6",
     "simple-git-hooks": "^2.8.0"
   },
   "devDependencies": {
@@ -36,7 +37,7 @@
     "ts-jest": "^29.0.5",
     "typescript": "^5.0.2"
   },
-  "bin":{
-    "getdiff" : "bin/getdiff.js"
+  "bin": {
+    "getdiff": "bin/getdiff.js"
   }
 }
