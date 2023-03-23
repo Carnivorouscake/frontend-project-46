@@ -1,5 +1,7 @@
 import { readFileSync } from 'fs';
 
+import getObjectFromFile from '../src/parser.js';
+
 const compare = (a, b) => {
   if (a[1] === b[1]) {
     return 0;
@@ -13,11 +15,11 @@ const compare = (a, b) => {
 const getDiff = (filePath1, filePath2) => {
 
 
-  const fileData1 = readFileSync(filePath1, { encoding: 'utf8', flag: 'r'});
-  const fileData2 = readFileSync(filePath2,  { encoding: 'utf8', flag: 'r'});
-  
-  const object1 = JSON.parse(fileData1);
-  const object2 = JSON.parse(fileData2); 
+
+
+   const object1 =  getObjectFromFile(filePath1);
+   const object2 =  getObjectFromFile(filePath2);
+
 
   let result = [];
   for (let key in object1){
